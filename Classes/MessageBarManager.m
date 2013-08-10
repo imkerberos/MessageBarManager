@@ -5,15 +5,11 @@
 //  Copyright (c) 2013 Terry Worona. All rights reserved.
 //
 
+#import <FontAwesomeKit/FontAwesomeKit.h>
 #import "MessageBarManager.h"
 
 // Quartz
 #import <QuartzCore/QuartzCore.h>
-
-// Image Constants
-#define kMessageBarImageIconError @"icon-error.png"
-#define kMessageBarImageIconSuccess @"icon-success.png"
-#define kMessageBarImageIconInfo @"icon-info.png"
 
 // Numeric Constants
 #define kMessageBarAlpha 0.96
@@ -376,18 +372,17 @@ static UIColor *descriptionColor = nil;
     UIImage *iconImage = nil;
     switch (type) {
         case MessageBarMessageTypeError:
-            iconImage = [UIImage imageNamed:kMessageBarImageIconError];
+            iconImage = [FontAwesomeKit imageForIcon:FAKIconRemoveSign imageSize:(CGSize){36,36} fontSize:32.0f attributes:@{FAKImageAttributeForegroundColor : [UIColor whiteColor]}];
             break;
         case MessageBarMessageTypeSuccess:
-            iconImage = [UIImage imageNamed:kMessageBarImageIconSuccess];
+            iconImage = [FontAwesomeKit imageForIcon:FAKIconOkSign imageSize:(CGSize){36,36} fontSize:32.0f attributes: @{FAKImageAttributeForegroundColor : [UIColor whiteColor]}];
             break;
         case MessageBarMessageTypeInfo:
-            iconImage = [UIImage imageNamed:kMessageBarImageIconInfo];
+            iconImage = [FontAwesomeKit imageForIcon:FAKIconInfoSign imageSize:(CGSize){36, 36} fontSize:32.0f attributes:@{FAKImageAttributeForegroundColor : [UIColor whiteColor]}];
             break;
         default:
             break;
     }
     return iconImage;
 }
-
 @end
