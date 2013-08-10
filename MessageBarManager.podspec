@@ -1,4 +1,4 @@
-Pod::spec.new do |spec|
+Pod::Spec.new do |spec|
     spec.name = 'MessageBarManager'
     spec.version = '0.1'
     spec.license = 'BSD'
