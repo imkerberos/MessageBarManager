@@ -1,14 +1,14 @@
-Pod::spec.new do |s|
-    s.name = 'MessageBarManager'
-    s.version = '0.1'
-    s.license = 'Custom'
-    s.platform = :ios, '5.0'
-    s.summary = 'An iOS manager for presenting system-wide notifications via a dropdown message bar.'
-    s.homepage = 'https://github.com/imkerberos/MessageBarManager'
-    s.author = {'terryworona' => ''}
-    s.source = { :git => 'https://github.com/imkerberos/MessageBarManager.git', :tag => '0.1'}
-    s.source_files = 'Classes/*.{h,m}'
-    s.requires_arc = true
-    s.dependency 'FontAwesomeKit'
-    s.frameworks = 'QuartzCore'
+Pod::spec.new do |spec|
+    spec.name = 'MessageBarManager'
+    spec.version = '0.1'
+    spec.license = 'BSD'
+    spec.platform = :ios, '5.0'
+    spec.summary = 'An iOS manager for presenting system-wide notifications via a dropdown message bar.'
+    spec.homepage = 'https://github.com/imkerberos/MessageBarManager'
+    spec.author = {'terryworona' => ''}
+    spec.source = { :git => 'https://github.com/imkerberos/MessageBarManager.git', :tag => '0.1'}
+    spec.source_files = 'Classes/*.{h,m}'
+    spec.requires_arc = true
+    spec.dependency 'FontAwesomeKit'
+    spec.frameworks = 'QuartzCore'
 end
