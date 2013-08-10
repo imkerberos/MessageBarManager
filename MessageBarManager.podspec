@@ -9,6 +9,6 @@ Pod::spec.new do |spec|
     spec.source = { :git => 'https://github.com/imkerberos/MessageBarManager.git', :tag => '0.1'}
     spec.source_files = 'Classes/*.{h,m}'
     spec.requires_arc = true
-    spec.dependency 'FontAwesomeKit'
+    spec.dependency = 'FontAwesomeKit'
     spec.frameworks = 'QuartzCore'
 end
