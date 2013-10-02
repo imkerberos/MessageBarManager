@@ -318,7 +318,11 @@ static UIColor *descriptionColor = nil;
 - (CGFloat)width
 {
     if (_width == 0){
-        _width = [UIScreen mainScreen].bounds.size.width;
+        if (UIInterfaceOrientationIsPortrait([[UIDevice currentDevice] orientation])) {
+            _width = [UIScreen mainScreen].bounds.size.width;
+        } else {
+            _width = [UIScreen mainScreen].bounds.size.height;
+        }
     }
     return _width;
 }
